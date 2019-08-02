@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>microservice-oim-client</module>
+        <module>microservice-oim-context</module>
+        <module>microservice-oim-event</module>
+    </modules>
+    <parent>
+        <groupId>com.match</groupId>
+        <artifactId>match-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <groupId>com.match</groupId>
+    <artifactId>microservice-oim</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
+    <properties>
+        <version>1.0.0</version>
+        <microservice-oim-version>1.0.0</microservice-oim-version>
+        <microservice-common-version>1.0.0</microservice-common-version>
+        <microservice-user-version>1.0.0</microservice-user-version>
+        <microservice-reply-version>1.0.0</microservice-reply-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.match</groupId>
+            <artifactId>microservice-common</artifactId>
+            <version>${microservice-common-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.match</groupId>
+            <artifactId>microservice-user-event</artifactId>
+            <version>${microservice-user-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+
+</project>
