@@ -19,10 +19,10 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients("com.match.*.client")
 @EnableHystrix                // 开启断路器
 @EnableHystrixDashboard
-@SpringBootApplication
 @ComponentScan({"com.match.oim","com.match.*.client.fallback","com.match.common"})
 @EnableEurekaClient
 @ServletComponentScan
+@SpringBootApplication
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class,args);

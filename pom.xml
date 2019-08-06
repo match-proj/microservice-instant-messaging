@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>microservice-oim-client</module>
-        <module>microservice-oim-context</module>
-        <module>microservice-oim-event</module>
+        <module>microservice-instant-messaging-client</module>
+        <module>microservice-instant-messaging-context</module>
+        <module>microservice-instant-messaging-event</module>
     </modules>
     <parent>
         <groupId>com.match</groupId>
@@ -15,13 +15,13 @@
     </parent>
 
     <groupId>com.match</groupId>
-    <artifactId>microservice-oim</artifactId>
+    <artifactId>microservice-instant-messaging</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
 
     <properties>
         <version>1.0.0</version>
-        <microservice-oim-version>1.0.0</microservice-oim-version>
+        <microservice-instant-messaging-version>1.0.0</microservice-instant-messaging-version>
         <microservice-common-version>1.0.0</microservice-common-version>
         <microservice-user-version>1.0.0</microservice-user-version>
         <microservice-reply-version>1.0.0</microservice-reply-version>

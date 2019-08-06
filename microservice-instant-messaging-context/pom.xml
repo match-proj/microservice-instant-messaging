@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>microservice-oim</artifactId>
+        <artifactId>microservice-instant-messaging</artifactId>
         <groupId>com.match</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-oim-context</artifactId>
+    <artifactId>microservice-instant-messaging-context</artifactId>
     <version>${parent.version}</version>
     <dependencies>
         <dependency>
@@ -23,6 +23,12 @@
             <artifactId>microservice-user-client</artifactId>
             <version>${microservice-user-version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.match</groupId>
+            <artifactId>microservice-user-event</artifactId>
+            <version>${microservice-user-version}</version>
+        </dependency>
         <dependency>
             <groupId>com.match</groupId>
             <artifactId>microservice-reply-client</artifactId>
@@ -30,8 +36,19 @@
         </dependency>
         <dependency>
             <groupId>com.match</groupId>
-            <artifactId>microservice-oim-client</artifactId>
-            <version>${microservice-oim-version}</version>
+            <artifactId>microservice-instant-messaging-client</artifactId>
+            <version>${microservice-instant-messaging-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.middleware.plugin</groupId>
+            <artifactId>microservice-stream-redis</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.middleware.plugin</groupId>
+            <artifactId>microservice-stream-springboot-starter</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
 
