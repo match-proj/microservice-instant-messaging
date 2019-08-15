@@ -17,7 +17,7 @@ import java.util.List;
  * @Date 2019/8/2 18:01
  * @Version v1.0
  */
-@FeignClient(name = "microservice-oim",configuration = FeignSupportConfig.class)
+@FeignClient(name = "microservice-instant-messaging",configuration = FeignSupportConfig.class)
 public interface FriendsClient {
 
     @PostMapping("/applyFriends")

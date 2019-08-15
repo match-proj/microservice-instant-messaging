@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Date 2019/8/2 18:00
  * @Version v1.0
  */
-@FeignClient(name = "microservice-oim",configuration = FeignSupportConfig.class)
+@FeignClient(name = "microservice-instant-messaging",configuration = FeignSupportConfig.class)
 public interface DynamicClient {
     @PostMapping("/dynamic/publish")
     public void publishDynamic(@RequestParam("userId") String userId,@RequestBody DynamicAddDTO dynamic);

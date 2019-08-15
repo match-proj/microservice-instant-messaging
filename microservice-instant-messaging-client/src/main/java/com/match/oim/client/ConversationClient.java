@@ -14,7 +14,7 @@ import java.util.List;
  * @Date 2019/8/2 17:50
  * @Version v1.0
  */
-@FeignClient(name = "microservice-oim",configuration = FeignSupportConfig.class)
+@FeignClient(name = "microservice-instant-messaging",configuration = FeignSupportConfig.class)
 public interface ConversationClient {
 
     @PostMapping("/conversation/createSingleConversation")

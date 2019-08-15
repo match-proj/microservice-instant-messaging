@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice-oim
+    name: microservice-instant-messaging
   profiles:
     active: dev
   cloud:

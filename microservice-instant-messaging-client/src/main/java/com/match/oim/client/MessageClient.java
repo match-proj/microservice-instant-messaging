@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
  * @Date 2019/8/2 18:05
  * @Version v1.0
  */
-@FeignClient(name = "microservice-oim",configuration = FeignSupportConfig.class)
+@FeignClient(name = "microservice-instant-messaging",configuration = FeignSupportConfig.class)
 public interface MessageClient {
 
     @GetMapping("/message/getPeopleSimpleInfoByPeopleId")

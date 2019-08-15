@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>microservice-instant-messaging-context</artifactId>
-    <version>${parent.version}</version>
+    <version>${version}</version>
     <dependencies>
         <dependency>
             <groupId>com.match</groupId>
@@ -42,15 +42,12 @@
 
         <dependency>
             <groupId>com.github.middleware.plugin</groupId>
-            <artifactId>microservice-stream-redis</artifactId>
-            <version>1.0.0</version>
+            <artifactId>event-stream-redis</artifactId>
         </dependency>
         <dependency>
             <groupId>com.github.middleware.plugin</groupId>
-            <artifactId>microservice-stream-springboot-starter</artifactId>
-            <version>1.0.0</version>
+            <artifactId>event-stream-springboot-starter</artifactId>
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
