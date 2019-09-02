@@ -14,6 +14,10 @@ import java.util.Properties;
 @Configuration
 public class EventStreamConfiguration {
 
+
+
+
+
     @Bean
     public RedisChannelConfig getRedisChannelConfig(){
         Properties properties = new Properties();
