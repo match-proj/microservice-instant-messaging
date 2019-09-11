@@ -10,6 +10,7 @@ spring:
         service-id: microservice-config
         enabled: true
       profile: ${spring.profiles.active}
+      name: microservice-common,${spring.application.name}
 
 eureka:
   instance:
