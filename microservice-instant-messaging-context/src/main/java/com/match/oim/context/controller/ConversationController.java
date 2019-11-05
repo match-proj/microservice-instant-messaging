@@ -28,26 +28,31 @@ public class ConversationController implements ConversationClient {
     ConversationService conversationService;
 
 
-    public ResponseData createSingleConversation(@RequestParam("userId") String userId,@Valid @RequestBody CreateConversationDTO createConversationDTO){
+    @Override
+    public ResponseData createSingleConversation(@RequestParam("userId") String userId, @Valid @RequestBody CreateConversationDTO createConversationDTO){
         String conversationId = conversationService.createSingleConversation(userId, createConversationDTO.getFirendsMessageUserId());
         return ResponseDataUtils.buildSuccess(conversationId);
     }
 
-    public ResponseData createGroupConversation(@RequestParam("userId") String userId,@Valid @RequestBody CreateGroupConversationDTO createConversationDTO){
+    @Override
+    public ResponseData createGroupConversation(@RequestParam("userId") String userId, @Valid @RequestBody CreateGroupConversationDTO createConversationDTO){
         String conversationId = conversationService.createGroupConversation(userId,createConversationDTO.getMessageUserIds());
         return ResponseDataUtils.buildSuccess(conversationId);
     }
 
 
-    public void editConversation(@PathVariable("conversationId") String conversationId ,@RequestParam("userId") String userId, @RequestBody EditConversationDTO editConversationDTO){
+    @Override
+    public void editConversation(@PathVariable("conversationId") String conversationId , @RequestParam("userId") String userId, @RequestBody EditConversationDTO editConversationDTO){
         conversationService.editConversation(userId,conversationId ,editConversationDTO);
     }
 
 
+    @Override
     public List<ConversationListDTO> list(@RequestParam("userId") String userId){
         return conversationService.list(userId);
     }
 
+    @Override
     public ConversationDTO getConversation(@RequestParam("conversationId") String conversationId){
         return conversationService.getConversation(conversationId);
     }

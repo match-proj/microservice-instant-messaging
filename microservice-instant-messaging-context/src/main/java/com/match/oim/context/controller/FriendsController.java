@@ -28,21 +28,25 @@ public class FriendsController implements FriendsClient {
     private FriendsService friendsService;
 
 
+    @Override
     @PostMapping("/applyFriends")
     public void applyFriends(@RequestParam("userId") String userId,@RequestParam("messageUserId")String messageUserId){
         friendsService.applyFriends(userId,messageUserId);
     }
 
+    @Override
     @PostMapping("/handlerFriendsApply")
     public void handlerFriendsApply(@RequestParam("userId") String userId,@RequestParam("id")String id, @RequestParam("status") FriendsApplyRecordStatus status){
         friendsService.handlerFriendsApply(userId,id,status);
     }
 
+    @Override
     @GetMapping("/getFriendsApplyList")
     public List<FriendsApplyRecordDTO> getFriendsApplyList(@RequestParam("userId") String userId){
         return friendsService.getFriendsApplyList(userId);
     }
 
+    @Override
     @GetMapping("/getFriendsList")
     public List<MessageUserSimpleInfoDTO> getFriendsList(@RequestParam("userId") String userId){
         return friendsService.getFriendsList(userId);

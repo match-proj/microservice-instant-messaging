@@ -17,4 +17,5 @@ public interface ConversationUserRepository extends JpaRepository<ConversationUs
     List<ConversationUser> findAllByMessageUserId(String messageUserId);
 
     ConversationUser findByMessageUserIdAndConversationId(String messageUserId, String conversationId);
+
 }

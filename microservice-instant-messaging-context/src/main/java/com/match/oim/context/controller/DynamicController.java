@@ -26,11 +26,13 @@ public class DynamicController implements DynamicClient {
     private DynamicService dynamicService;
 
 
-    public void publishDynamic(@RequestParam("userId") String userId,@RequestBody DynamicAddDTO dynamic){
+    @Override
+    public void publishDynamic(@RequestParam("userId") String userId, @RequestBody DynamicAddDTO dynamic){
         dynamicService.publishDynamic(userId,dynamic);
     }
 
 
+    @Override
     public PageResult<DynamicDTO> listSelf(@RequestParam("userId") String userId,
                                            @RequestParam(required = false,name = "page",defaultValue = "1") Integer page,
                                            @RequestParam(required = false,name = "size",defaultValue = "10") Integer size) {
@@ -38,6 +40,7 @@ public class DynamicController implements DynamicClient {
     }
 
 
+    @Override
     public PageResult<DynamicDTO> listFriend(@RequestParam("userId") String userId,
                                              @RequestParam(required = false,name = "page",defaultValue = "1") Integer page,
                                              @RequestParam(required = false,name = "size",defaultValue = "10") Integer size) {

@@ -15,9 +15,9 @@ import org.springframework.context.annotation.ComponentScan;
  * @Date 2019/7/31 17:18
  * @Version v1.0
  */
+@EnableHystrix                // 开启断路器
 @EnableDiscoveryClient
 @EnableFeignClients("com.match.*.client")
-@EnableHystrix                // 开启断路器
 @EnableHystrixDashboard
 @ComponentScan({"com.match.oim","com.match.*.client.fallback","com.match.common"})
 @EnableEurekaClient

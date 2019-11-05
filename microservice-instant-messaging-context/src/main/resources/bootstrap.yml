@@ -19,7 +19,7 @@ eureka:
     lease-expiration-duration-in-seconds: 20
   client:
     service-url:
-      defaultZone: http://127.0.0.1:7000/eureka/
+      defaultZone: http://microservice-eureka:7000/eureka/
 
 #开启debug信息
 #logging:

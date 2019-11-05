@@ -27,21 +27,25 @@ public class MessageController implements MessageClient {
     private MessageService messageService;
 
 
+    @Override
     public MessageUserSimpleInfoDTO getPeopleSimpleInfoByPeopleId(@RequestParam("peopleId")String peopleId){
         return messageService.getPeopleSimpleInfoByPeopleId(peopleId);
     }
 
 
+    @Override
     public MessageUserSimpleInfoDTO getPeopleSimpleInfo(@RequestParam("messageUserId") String messageUserId){
         return messageService.getPeopleSimpleInfo(messageUserId);
     }
 
 
-    public void publishMessage(@RequestParam("userId")String userId,@RequestBody PublishMessageDTO publishMessageDto){
+    @Override
+    public void publishMessage(@RequestParam("userId")String userId, @RequestBody PublishMessageDTO publishMessageDto){
         messageService.publishMessage(userId,publishMessageDto);
     }
 
 
+    @Override
     public PageResult<MessageDTO> list(@RequestParam(required = false,name = "page",defaultValue = "1") Integer page,
                                        @RequestParam(required = false,name = "size",defaultValue = "10") Integer size,
                                        @PathVariable("conversationId") String conversationId) {

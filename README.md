@@ -1,1 +1,1 @@
-# mecroservice-flyantschat
+# microservice-instant-messaging
